@@ -1,0 +1,42 @@
+{
+  "name": "Piksel",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "banner": "cfonts \"PIKSEL\" --font block --gradient cyan",
+    "dev:server": "node piksel-server/index.js",
+    "dev:app": "npm run tauri dev",
+    "dev:all": "npm run banner && concurrently -k -n SERVER,APP -c \"yellow.bold,cyan.bold\" \"npm run dev:server\" \"npm run dev:app\"",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/plugin-http": "^2.5.6",
+    "@tauri-apps/plugin-notification": "^2.3.3",
+    "@tauri-apps/plugin-opener": "^2",
+    "firebase": "^12.8.0",
+    "framer-motion": "^12.29.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "socket.io-client": "^4.8.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tauri-apps/cli": "^2",
+    "@types/node": "^25.1.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.6.0",
+    "autoprefixer": "^10.4.23",
+    "cfonts": "^3.3.1",
+    "concurrently": "^9.2.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "~5.8.3",
+    "vite": "^7.0.4"
+  }
+}

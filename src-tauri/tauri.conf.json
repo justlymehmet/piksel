@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Piksel",
+  "version": "0.1.0",
+  "identifier": "com.piksel.chat",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Piksel",
+        "width": 1064,
+        "height": 700,
+        "minWidth": 1064,
+        "minHeight": 700,
+        "resizable": true,
+        "decorations": false,
+        "transparent": true,
+        "center": true,
+        "visible": true,
+        "shadow": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' http://127.0.0.1:3001 http://localhost:3001 ws://127.0.0.1:3001 ws://localhost:3001 https://api.piksel.me wss://api.piksel.me https://*.firebaseio.com https://*.googleapis.com https://*.gstatic.com; img-src 'self' data: https: http:; video-src 'self' data: https: http:; frame-src 'self' https://www.youtube.com;"
+    }
+  },
+  "plugins": {
+    "http": null,
+    "opener": null
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

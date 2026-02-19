@@ -1,0 +1,15 @@
+1- BUG HUNTER ROZET, ERKEN DESTEKÇİ ROZETİ, BETA KULLANICISI ROZETİ, PERSONEL ROZETİ
+2- GİRİŞTE FARKLI DOMAİN EPOSTA
+3- ADMİN sayfasında şikayetler ve report sistemi
+
+ÇÖZÜLDÜ - BUTONLARDA BOUNCE ANİMASYONU
+ÇÖZÜLDÜ - ENGEL SİSTEMİ
+ÇÖZÜLDÜ - yeni dm de server-dot altında mesaj bildirimi
+ÇÖZÜLDÜ - admin büyütecine tıklandığında ekran yukarı kayıyor
+ÇÖZÜLDÜ - ENGELDE MESAJ ATILMAMASI GEREKTİĞİ.
+ÇÖZÜLDÜ - MESAJ ŞİFRELEME
+ÇÖZÜLDÜ - AÇIK DM KAPATMA SORUNU
+ÇÖZÜLDÜ - arkadaşlık gönderilen kişi zaten istek göndermişse kabul edilsin
+ÇÖZÜLDÜ - ADMİNLER ADMİN LİST GÖRÜNTÜLEYEMİYOR
+ÇÖZÜLDÜ - YAZIYOR İBARESİ
+ÇÖZÜLDÜ - Farklı pencere açıkken durum kontrolü
