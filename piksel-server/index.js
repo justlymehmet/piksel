@@ -37,6 +37,20 @@ app.get("/", (_req, res) => {
 app.get("/health", (_req, res) => {
   res.status(200).json({ ok: true });
 });
+
+app.use(express.json());
+
+const httpServer = http.createServer(app);
+
+const io = new Server(httpServer, {
+  cors: {
+    origin: (origin, cb) => {
+      if (isOriginAllowed(origin)) return cb(null, true);
+      return cb(new Error("Not allowed by CORS"));
+    },
+    credentials: true,
+  },
+});
 const io = new Server(httpServer, {
   cors: {
     origin: (origin, cb) => {
