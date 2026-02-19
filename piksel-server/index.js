@@ -9,8 +9,6 @@ const { Pool } = require("pg");
 const { createAdapter } = require("@socket.io/redis-adapter");
 const Redis = require("ioredis");
 
-
-
 const parsedCorsOrigins = String(process.env.CORS_ORIGINS || "")
   .split(",")
   .map((x) => x.trim())
