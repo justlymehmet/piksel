@@ -9,6 +9,14 @@ const { Pool } = require("pg");
 const { createAdapter } = require("@socket.io/redis-adapter");
 const Redis = require("ioredis");
 
+app.get("/", (_req, res) => {
+  res.status(200).json({ ok: true, service: "piksel-api" });
+});
+
+app.get("/health", (_req, res) => {
+  res.status(200).json({ ok: true });
+});
+
 const parsedCorsOrigins = String(process.env.CORS_ORIGINS || "")
   .split(",")
   .map((x) => x.trim())
