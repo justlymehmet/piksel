@@ -9,13 +9,7 @@ const { Pool } = require("pg");
 const { createAdapter } = require("@socket.io/redis-adapter");
 const Redis = require("ioredis");
 
-app.get("/", (_req, res) => {
-  res.status(200).json({ ok: true, service: "piksel-api" });
-});
 
-app.get("/health", (_req, res) => {
-  res.status(200).json({ ok: true });
-});
 
 const parsedCorsOrigins = String(process.env.CORS_ORIGINS || "")
   .split(",")
@@ -38,9 +32,13 @@ app.use(
     credentials: true,
   }),
 );
-app.use(express.json());
+app.get("/", (_req, res) => {
+  res.status(200).json({ ok: true, service: "piksel-api" });
+});
 
-const httpServer = http.createServer(app);
+app.get("/health", (_req, res) => {
+  res.status(200).json({ ok: true });
+});
 const io = new Server(httpServer, {
   cors: {
     origin: (origin, cb) => {
