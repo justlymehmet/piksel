@@ -51,15 +51,6 @@ const io = new Server(httpServer, {
     credentials: true,
   },
 });
-const io = new Server(httpServer, {
-  cors: {
-    origin: (origin, cb) => {
-      if (isOriginAllowed(origin)) return cb(null, true);
-      return cb(new Error("Not allowed by CORS"));
-    },
-    credentials: true,
-  },
-});
 
 const hasDbConfig = Boolean(process.env.DATABASE_URL);
 const pool = hasDbConfig
